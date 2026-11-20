@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Chu et~al.(2026)Chu, Yu, Wen, Liu, Qian, Yang, Shi, and
@@ -8,6 +8,14 @@ Chu, Q.; Yu, Z.; Wen, S.; Liu, Y.; Qian, C.; Yang, C.; Shi, C.; and Liu, Z.
 \newblock MASBench: Benchmarking LLM-based Multi-Agent Collaboration under
   Partial Observability.
 \newblock \emph{arXiv preprint arXiv:2610.04672}.
+
+\bibitem[{Du et~al.(2024)Du, Li, Torralba, Tenenbaum, and
+  Mordatch}]{du2024debate}
+Du, Y.; Li, S.; Torralba, A.; Tenenbaum, J.~B.; and Mordatch, I. 2024.
+\newblock Improving Factuality and Reasoning in Language Models through
+  Multiagent Debate.
+\newblock In \emph{Proceedings of the 41st International Conference on Machine
+  Learning}, 11733--11763.
 
 \bibitem[{Pezeshkpour and Hruschka(2024)}]{pezeshkpour2024order}
 Pezeshkpour, P.; and Hruschka, E. 2024.
@@ -20,6 +28,14 @@ Pezeshkpour, P.; and Hruschka, E. 2024.
 Yang, Z.; Jian, P.; and Li, C. 2025.
 \newblock Option Symbol Matters: Investigating and Mitigating Multiple-Choice
   Option Symbol Bias of Large Language Models.
-\newblock In \emph{Proceedings of NAACL}, 1902--1917.
+\newblock In \emph{Proceedings of the 2025 Conference of the Nations of the
+  Americas Chapter of the Association for Computational Linguistics: Human
+  Language Technologies (Volume 1: Long Papers)}, 1902--1917.
+
+\bibitem[{Zheng et~al.(2024)Zheng, Zhou, Meng, Zhou, and
+  Huang}]{zheng2024selectors}
+Zheng, C.; Zhou, H.; Meng, F.; Zhou, J.; and Huang, M. 2024.
+\newblock Large Language Models Are Not Robust Multiple Choice Selectors.
+\newblock In \emph{International Conference on Learning Representations}.
 
 \end{thebibliography}

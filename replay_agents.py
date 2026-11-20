@@ -12,7 +12,7 @@ LABELS = 'ABC'
 
 
 def make_cases():
-    rng = Random(171117)
+    rng = Random(171118)
     slots = [(d, m) for d in range(1, 6) for m in range(480, 1080, 20)]
     rng.shuffle(slots)
     cases = []
@@ -38,13 +38,21 @@ def participant_prompt(case, member):
     busy = '\n'.join(case['busy'][member]) or 'None'
     return (f'Your private calendar lists all your busy intervals below. You are free at all other times.\nBusy intervals:\n{busy}\n'
             f'Candidate meetings:\n{slots}\nFor each candidate, report whether you are available. '
-            'Output exactly one line in this format: A available; B unavailable; C available. '
-            'Use available or unavailable for each candidate.')
+            'Output exactly one line in this format: A <status>; B <status>; C <status> '
+            'Replace each <status> with available or unavailable based on your calendar. A final period is optional.')
 
 
 def expected(case, member):
     return '; '.join(f'{label} {"unavailable" if time in case["busy"][member] else "available"}'
                      for label, time in zip(LABELS, case['times'])) + '.'
+
+
+def parse_report(text):
+    match = re.fullmatch(
+        r'A (available|unavailable); B (available|unavailable); C (available|unavailable)\.?',
+        text.strip(),
+    )
+    return match.group(0).removesuffix('.') + '.' if match else None
 
 
 def leader_prompt(case, reports, reverse):
@@ -75,7 +83,7 @@ def main():
     args = p.parse_args()
     all_cases = make_cases()
     cases = all_cases[:4] if args.split == 'smoke' else all_cases[4:]
-    plan = {'schema': 1, 'source': 'synthetic private busy calendars', 'seed': 171117,
+    plan = {'schema': 2, 'source': 'synthetic private busy calendars', 'seed': 171118,
             'split': args.split, 'cases': cases, 'script_sha256': sha(Path(__file__).read_bytes())}
     args.out.mkdir(parents=True, exist_ok=True)
     plan_path = args.out / 'plan.json'
@@ -104,7 +112,7 @@ def main():
                 for case in cases:
                     folder = args.out / 'cases' / case['id']
                     reports = [cached_call(folder / f'member-{i+1}.json', backend, participant_prompt(case, i), 'agent')['text'].strip() for i in range(5)]
-                    if all(report == expected(case, i) for i, report in enumerate(reports)):
+                    if all(parse_report(report) == expected(case, i) for i, report in enumerate(reports)):
                         for reverse in (False, True):
                             name = 'reverse' if reverse else 'forward'
                             cached_call(folder / f'leader-{name}.json', backend, leader_prompt(case, reports, reverse), 'leader')
@@ -130,12 +138,13 @@ def main():
             require(record['prompt_sha256'] == sha(participant_prompt(case, i)), 'Participant prompt mismatch')
             text = record['text'].strip()
             counts['reports'] += 1
-            if not re.fullmatch(r'A (available|unavailable); B (available|unavailable); C (available|unavailable)\.', text):
+            parsed = parse_report(text)
+            if parsed is None:
                 counts['malformed'] += 1
-            elif text != expected(case, i):
+            elif parsed != expected(case, i):
                 counts['inaccurate'] += 1
             reports.append(text)
-        if not all(report == expected(case, i) for i, report in enumerate(reports)):
+        if None in reports or not all(parse_report(report) == expected(case, i) for i, report in enumerate(reports)):
             continue
         counts['eligible'] += 1
         answers = []
@@ -160,7 +169,11 @@ def main():
             if a != b:
                 counts['changed'] += 1
                 counts['correct_to_wrong' if a == correct else 'wrong_to_correct' if b == correct else 'wrong_to_wrong'] += 1
-    print(json.dumps({'planned_cases': len(cases), 'mock': manifest['mock'], **counts}, indent=2))
+    report = {'planned_cases': len(cases), 'mock': manifest['mock'], **counts}
+    if args.split == 'smoke':
+        report['smoke_pass'] = (not manifest['mock'] and counts['valid_pairs'] >= 3
+                                and counts['missing_reports'] == counts['leader_missing'] == 0)
+    print(json.dumps(report, indent=2))
 
 
 if __name__ == '__main__':

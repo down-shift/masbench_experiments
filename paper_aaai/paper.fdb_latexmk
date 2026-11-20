@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex paper"] 1795207458.21059 "paper.aux" "paper.bbl" "paper" 1795207458.26351 0
+["bibtex paper"] 1795210615.59758 "paper.aux" "paper.bbl" "paper" 1795210643.64569 0
   "./aaai2027.bst" 1795194372.51226 30207 bd248dfe461b9b2fc7481a44feafe197 ""
-  "./references.bib" 1795194566.01876 1221 e61003606d00edc9d4b6da17f6f96c2c ""
-  "paper.aux" 1795207458.07471 392 14821e2badc9be2bbb2f2156b5feeed4 "pdflatex"
+  "./references.bib" 1795210614.07255 1996 5537ad19b3d015370303f721e5387b82 ""
+  "paper.aux" 1795210643.5239 632 6eae7420d94bab787f89094601838c82 "pdflatex"
   (generated)
   "paper.bbl"
   "paper.blg"
   (rewritten before read)
-["pdflatex"] 1795207457.67562 "paper.tex" "paper.pdf" "paper" 1795207458.26359 0
+["pdflatex"] 1795210643.12897 "paper.tex" "paper.pdf" "paper" 1795210643.64589 0
   "/tmp/masbench-texmf/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1698694482 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
   "/tmp/masbench-texmf/fonts/tfm/adobe/courier/pcrr8r.tfm" 1136768653 1292 bd42be2f344128bff6d35d98474adfe3 ""
   "/tmp/masbench-texmf/fonts/tfm/adobe/courier/pcrr8t.tfm" 1136768653 1384 4632f5e54900a7dadbb83f555bc61e56 ""
@@ -31,6 +31,8 @@
   "/tmp/masbench-texvar/fonts/map/pdftex/updmap/pdftex.map" 1795195037.23833 119409 f3ccac9c6c3abe6d27b0c4b4115a5914 ""
   "/usr/local/texlive/2026basic/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2026basic/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
+  "/usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2026basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2026basic/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/local/texlive/2026basic/texmf-dist/tex/generic/xkeyval/keyval.tex" 1762376337 2793 1b3f384b56e83970b7b3df9f2419d336 ""
@@ -71,9 +73,9 @@
   "/usr/local/texlive/2026basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1791298703 2966189 900d5e66508a4427168e52e3c61dba77 ""
   "/usr/local/texlive/2026basic/texmf.cnf" 1772405582 628 bbc09d6d38872d53c11bb48dc9b14e88 ""
   "aaai2027.sty" 1795194372.51177 20264 e7c5ee604b10a8b950e55b77a7db9191 ""
-  "paper.aux" 1795207458.07471 392 14821e2badc9be2bbb2f2156b5feeed4 "pdflatex"
-  "paper.bbl" 1795207458.2609 991 e5c617110f6e84175cd937046484fb9c "bibtex paper"
-  "paper.tex" 1795207457.49822 11464 14f6b831052a4741c10648c5d039fd9c ""
+  "paper.aux" 1795210643.5239 632 6eae7420d94bab787f89094601838c82 "pdflatex"
+  "paper.bbl" 1795210615.62152 1803 6e08286b309d7678e8383c4814bcca95 "bibtex paper"
+  "paper.tex" 1795210643.00138 10906 28284e6aafb22806601cda7ee2bc664b ""
   (generated)
   "paper.aux"
   "paper.log"

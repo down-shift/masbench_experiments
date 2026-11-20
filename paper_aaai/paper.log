@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.6)  20 NOV 2026 23:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.6)  21 NOV 2026 00:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -296,25 +296,30 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 9.0pt on input line 17.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 19.
+
+Overfull \vbox (1.77646pt too high) has occurred while \output is active []
+
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.95pt on input line 38.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.95pt on input line 38.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 42
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 46
 .
- (/usr/local/texlive/2026basic/texmf-dist/tex/latex/psnfss/t1pcr.fd
+
+(/usr/local/texlive/2026basic/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [1{/tmp/masbench-texvar/fonts/map/pdftex/updmap/pdftex.map}{/tmp/masbench-tex
 mf/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}
 
 
 
-{/usr/local/texlive/2026basic/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 78.
+(Font)              <7> on input line 82.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 78.
- [2] (./paper.bbl
+(Font)              <5> on input line 82.
+ [2{/usr/local/texlive/2026basic/texmf-dist/fonts/enc/dvips/base/8r.enc}] (./pa
+per.bbl
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.0pt on input line 10.
 ) [3
@@ -326,20 +331,22 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5896 strings out of 469006
- 97482 string characters out of 5454813
- 519005 words of memory out of 5000000
- 34520 multiletter control sequences out of 15000+600000
+ 5902 strings out of 469006
+ 97620 string characters out of 5454813
+ 518005 words of memory out of 5000000
+ 34526 multiletter control sequences out of 15000+600000
  657785 words of font info for 53 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 89i,8n,117p,1160b,319s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</tmp/masbench-texmf/fonts/type1/urw/courier/ucrr8a.pfb></tmp/masbench-texmf/
-fonts/type1/public/newtx/ztmb.pfb></tmp/masbench-texmf/fonts/type1/public/newtx
-/ztmr.pfb></tmp/masbench-texmf/fonts/type1/public/newtx/ztmri.pfb>
-Output written on paper.pdf (3 pages, 127619 bytes).
+ 89i,8n,117p,1029b,319s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></tmp/masbench-texmf/fonts/type1/urw/courier/ucrr8a.pfb></tmp/masbench
+-texmf/fonts/type1/public/newtx/ztmb.pfb></tmp/masbench-texmf/fonts/type1/publi
+c/newtx/ztmr.pfb></tmp/masbench-texmf/fonts/type1/public/newtx/ztmri.pfb>
+Output written on paper.pdf (3 pages, 143803 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 22 compressed objects within 1 object stream
+ 46 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
