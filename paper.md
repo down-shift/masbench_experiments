@@ -14,7 +14,7 @@ Exploratory free-form scheduling runs produced no valid final meetings, making i
 
 ## 2. Related work
 
-MASBench studies multi-agent collaboration under partial observability, including scheduling with private participant calendars [1]. Our task uses its scheduling calendars to construct explicit leader inputs; the participant messages are generated from calendar availability, not obtained from a model conversation. Prior research has studied position sensitivity in multiple-choice and other LLM evaluations [2]. Our experiment applies a paired presentation intervention to a small scheduling decision. It does not claim that position sensitivity is a new phenomenon.
+MASBench studies multi-agent collaboration under partial observability, including scheduling with private participant calendars [1]. Our task uses its scheduling calendars to construct explicit leader inputs; the participant messages are generated from calendar availability, not obtained from a model conversation. Prior research has studied position sensitivity in multiple-choice and other LLM evaluations [2]. Our experiment applies a paired presentation intervention to a scheduling decision.
 
 ## 3. Task and experimental design
 
@@ -65,7 +65,7 @@ The sample consists of 32 selected scenarios from one benchmark and one prompt f
 
 ## 6. Conclusion
 
-In a controlled scheduling leader task derived from MASBench, reversing only two candidate listing lines changed eight of 64 held-out decisions for the tested Qwen3-8B configuration. The change improved strict accuracy from 87.5% to 100% on this sample. Equivalent availability evidence did not guarantee an equivalent decision across these two presentations.
+In a controlled scheduling leader task derived from MASBench, reversing two candidate listing lines changed eight of 64 held-out decisions for the tested Qwen3-8B configuration. The change improved strict accuracy from 87.5% to 100% on this sample.
 
 ## References
 

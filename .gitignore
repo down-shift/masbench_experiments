@@ -4,3 +4,13 @@ __pycache__/
 MASBench/
 plans/
 runs/
+
+# Local metadata and LaTeX build output
+.DS_Store
+*.py[cod]
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log

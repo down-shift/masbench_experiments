@@ -1,10 +1,12 @@
 # MASBench scheduling experiments
 
-This package runs the experiments proposed in *Moving the Decisive Evidence in MASBench Scheduling*. It ships with frozen plans, the audit records used to build them, a resumable model runner, and exact scoring. Python and `uv` suffice for preparation, offline checks, and scoring. Model inference runs on a separate chat-completions server.
+This repository contains scheduling experiments derived from MASBench, a resumable model runner, and scoring code. The paper and its anonymous reproducibility package are in `paper_aaai/`. The package `paper_aaai/supplement.zip` includes the frozen confirmation plan, saved responses, and instructions for reproducing the paper's main analysis offline.
+
+The `plans/` and `runs/` directories are ignored by Git. The commands below describe the earlier scheduling experiments and require locally prepared plans; the supplement includes only `order-smoke.json` and `order-main.json` from those plans. Python and `uv` suffice for preparation, offline checks, and scoring. Model inference runs on a separate chat-completions server.
 
 ## Start on an M1 Mac
 
-Install [uv](https://docs.astral.sh/uv/getting-started/installation/), unzip the archive, and run commands from its project directory. The first command creates a Python 3.12 environment. There are no third-party Python packages.
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and run commands from the project directory. Extract the plans from `paper_aaai/supplement.zip` into the project directory first. The first command creates a Python 3.12 environment. There are no third-party Python packages.
 
 ```sh
 uv sync --locked
@@ -82,7 +84,7 @@ The three main plans use the same 32 scenarios. The relocation plan already incl
 
 ## Rebuild a plan
 
-The included plans run without Git or the upstream checkout. To rebuild, check out the exact audited revision and run:
+The plans in the supplement run without Git or the upstream checkout. To rebuild, check out the exact audited revision and run:
 
 ```sh
 git clone https://github.com/BUPT-GAMMA/MASBench.git
